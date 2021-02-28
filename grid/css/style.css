@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main{
+  height: 100vh;
+  background-color: rgb(231, 202, 202);
+  display: grid;
+  grid-template-columns: 4rem 22rem auto;
+  grid-template-rows: 3rem 4rem auto;
+
+  grid-template-areas: "header header header"
+                       "nav chat info"
+                       "nav chat info";
+}
+
+
+
+
+header {
+  background-color: #464775;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 4rem 22rem auto 4rem;
+  grid-template-areas: "btn name search icon";
+  align-items: center;
+}
+aside {
+  grid-area: nav;
+  background-color: #33344A;
+}
+
+#chat {
+  grid-area: chat;
+  background-color: #ffff;
+}
+
+#infos {
+  background-color: #F3F2F1;
+  grid-area: info;
+  /* height: 100%; */
+}
+.btn{
+  grid-area: btn;
+  text-align: center;
+}
+
+input{
+  border: 0;
+    background: #edebe9;
+    border-radius: .3rem;
+    color: #fff;
+    margin-bottom: .1rem;
+    padding: 8px;
+    width: 680px;
+    grid-area: search;
+}
+
+header h2{
+  padding-left: 20px;
+  font-size: 18px;
+  grid-area: name;
+  color: white;
+  font-weight: 600;
+
+}
+
+.profile img{
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
